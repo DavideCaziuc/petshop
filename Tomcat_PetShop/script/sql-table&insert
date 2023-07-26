@@ -1,0 +1,71 @@
+//ATTENIONE: PER FAR FUNZIONARE LA CONNESSIONE AL DATABASE OLTRE A MODIFICARE LE GETCONNECION, MODIFICARE ANCHE IL PERCORSO INSERITO
+//NEI VARI METODI DELLA LOGINSERVLER
+
+<!-------------------------------------------------------------->
+CREATE TABLE `psutenti` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `cognome` varchar(50) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `datadinascita` date NOT NULL,
+  `cellulare` varchar(20) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `ruolo` enum('M','G') DEFAULT 'G',
+  `stato` enum('A','D') DEFAULT 'A',
+  PRIMARY KEY (`id`)
+)
+<!-------------------------------------------------------------->
+CREATE TABLE `clienti` (
+  `idCliente` bigint NOT NULL AUTO_INCREMENT,
+  `citta` varchar(255) DEFAULT NULL,
+  `cognome` varchar(255) DEFAULT NULL,
+  `indirizzo` varchar(255) DEFAULT NULL,
+  `nome` varchar(255) DEFAULT NULL,
+  `telefono` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idCliente`)
+)
+<!-------------------------------------------------------------->
+CREATE TABLE `animali` (
+  `idAnimale` bigint NOT NULL AUTO_INCREMENT,
+  `dataAcquisto` varchar(255) DEFAULT NULL,
+  `matricola` varchar(255) DEFAULT NULL,
+  `nomeAnimale` varchar(255) DEFAULT NULL,
+  `prezzo` double NOT NULL,
+  `tipoAnimale` varchar(255) DEFAULT NULL,
+  `IDCLIENTE` bigint DEFAULT NULL,
+  PRIMARY KEY (`idAnimale`),
+  KEY `FKrt8k856p7phke58ardm8wmj1q` (`IDCLIENTE`),
+  CONSTRAINT `FKrt8k856p7phke58ardm8wmj1q` FOREIGN KEY (`IDCLIENTE`) REFERENCES `clienti` (`idCliente`)
+)
+<!-------------------------------------------------------------->
+<!-- Inserimento Utenza Manager -->
+INSERT INTO `psutenti` (`nome`, `cognome`, `username`, `email`, `datadinascita`, `cellulare`, `password`, `ruolo`, `stato`)
+VALUES ('Daniele', 'Valente', 'DAVA1975', 'danielevalente@gmail.com', '1975-02-10', '3203003900', 'qwerty', 'M', 'A');
+<!-------------------------------------------------------------->
+<!-- Inserimento clienti -->
+INSERT INTO `clienti` (`citta`, `cognome`, `indirizzo`, `nome`, `telefono`) VALUES 
+('Roma', 'Rossi', 'Via Roma 123', 'Mario', '06 1234567'),
+('Milano', 'Bianchi', 'Via Milano 456', 'Laura', '02 9876543'),
+('Napoli', 'Verdi', 'Via Napoli 789', 'Giovanni', '081 4567890'),
+ ('Torino', 'Russo', 'Via Torino 101', 'Anna', '011 2345678'),
+('Firenze', 'Ferrari', 'Via Firenze 246', 'Luca', '055 7890123'),
+('Palermo', 'Gialli', 'Via Palermo 357', 'Martina', '091 6789012'),
+('Bologna', 'Baldi', 'Via Bologna 468', 'Paolo', '051 3456789'),
+('Genova', 'Marroni', 'Via Genova 791', 'Giulia', '010 5678901'),
+('Bari', 'Neri', 'Via Bari 123', 'Marco', '080 2345678'),
+('Verona', 'Verdi', 'Via Verona 456', 'Elena', '045 7890123');
+<!-------------------------------------------------------------->
+<!-- Inserimento animali -->
+INSERT INTO `animali` (`dataAcquisto`, `matricola`, `nomeAnimale`, `prezzo`, `tipoAnimale`, `IDCLIENTE`) VALUES 
+('2023-07-26', 'MAT001', 'Fuffy', 100.50, 'Cane', 1),
+('2023-07-24', 'MAT002', 'Whiskers', 50.75, 'Gatto', 2),
+('2023-07-22', 'MAT003', 'Rocky', 200.00, 'Cane', 3),
+('2023-07-20', 'MAT004', 'Fluffy', 75.25, 'Coniglio', 4),
+('2023-07-18', 'MAT005', 'Simba', 150.00, 'Cane', 5),
+('2023-07-16', 'MAT006', 'Nibbles', 25.50, 'Topo', 6),
+('2023-07-14', 'MAT007', 'Luna', 80.00, 'Gatto', 7),
+('2023-07-12', 'MAT008', 'Charlie', 120.25, 'Cane', 8),
+('2023-07-10', 'MAT009', 'Bella', 90.00, 'Cane', 9),
+('2023-07-08', 'MAT010', 'Mittens', 65.50, 'Gatto', 10);
+

@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: white;
+	margin: 0;
+	padding: 0 21%;
+}
+
+h3 {
+	color: black; /* Colore del testo nero */
+	text-align: center; /* Allineamento centrato */
+	font-family: Arial, sans-serif; /* Famiglia di caratteri */
+	font-size: 28px; /* Dimensione del testo */
+	margin-bottom: 20px;
+	/* Margine inferiore per separare il titolo dal contenuto successivo */
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	/* Ombreggiatura del testo */
+}
+
+.navbar {
+	background-color: white;
+	top: 0;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 0;
+}
+
+.navbar-logo {
+	margin-top: 3px;
+	width: 80px !important;
+	height: 60px !important;
+	left: 19%;
+}
+
+.navbar-login {
+	width: 30px !important;
+	height: 30px !important;
+	right: 19%;
+}
+
+.login-btn a {
+	display: inline-block;
+	padding: 10px;
+	background-color: black;
+	color: black;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+/* Stili per l'icona */
+.login-btn i {
+	font-size: 15px;
+	width: 30px;
+	height: 15px;
+	color: black;
+	/* Utilizza la trasformazione per ingrandire l'icona */
+	transform: scale(1.5);
+	display: inline-block;
+}
+
+.navbar-links {
+	display: flex;
+	color: black;
+}
+
+.navbar-links a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 20px;
+	color: black;
+}
+
+.navbar-search {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-search input[type="text"] {
+	padding: 5px;
+	border-radius: 4px;
+	border: none;
+}
+
+.navbar-login {
+	color: #fff;
+	color: black;
+	right: 19%;
+}
+
+.search-box {
+	display: flex;
+	justify-content: center;
+	background-color: #F5D295ff;
+	padding: 1%;
+	border-radius: 32px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.search-box input {
+	border: 0;
+	background-color: #F5D295ff;
+	font-size: 16px;
+	width: 0;
+	outline: none;
+	transition: 0.8s;
+}
+
+.search-box:hover input {
+	width: 200px;
+}
+
+.search-box button {
+	padding: 7px;
+	border: 0;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.user-icon {
+	color: black;
+}
+
+p {
+	color: #555;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #1c1c1c;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #333;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.image {
+	display: block; /* L'immagine sarà visualizzata come blocco */
+	margin: 0 auto;
+	/* Centrerà l'immagine orizzontalmente all'interno del suo contenitore */
+	max-width: 100%;
+	/* L'immagine non supererà mai la larghezza del suo contenitore */
+	width: 100%;
+	height: auto;
+	/* L'altezza dell'immagine si adatterà proporzionalmente alla larghezza */
+}
+
+/* Stile del dropdown */
+.user-account {
+	position: relative;
+	display: inline-block;
+}
+
+.login-btn {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.login-btn i {
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+/* CSS per il dropdown */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.show {
+	display: block;
+}
+
+/* Stili per .user-account */
+.user-account a {
+	display: flex;
+	background-color: #F5D295ff;
+	color: black;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+.user-account {
+	background-color: #F5D295ff;
+	display: flex;
+	align-items: center;
+	position: relative;
+	border-radius: 10px;
+	/* Per posizionare correttamente il dropdown rispetto a questo elemento */
+}
+
+.login-btn {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.login-btn i {
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+/* Rimani con il colore bianco quando l'utente passa sopra il link */
+.login-btn:hover {
+	background-color: orange;
+}
+
+#userDropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: orange;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#userDropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#userDropdown a:hover {
+    background-color: orange;
+}
+
+/* Classe "show" per mostrare il dropdown */
+#userDropdown.show {
+    display: block;
+}
+
+
+
+/* Stili per le tabelle */
+table {
+    width: 80%; /* Ridotto il valore della larghezza al 80% */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #e8b964;
+    padding: 8px; /* Ridotto il valore del padding a 8px */
+    text-align: left;
+}
+
+th {
+    background-color: #e8b964;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fff5e1;
+}
+
+/* Stili per gli link delle azioni (Edit e Delete) nella tabella */
+td a {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #f5d295;
+    color: #5d4037;
+    transition: background-color 0.3s, color 0.3s; /* Aggiunto il colore nella transizione */
+}
+
+td a:hover {
+    background-color: #e8b964;
+    color: #fff;
+}
+
+/* Aggiunta una piccola ombra alle celle delle tabelle */
+td, th {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rimuovere il bordo delle ultime celle per evitare doppio bordo */
+tr td:last-child, tr th:last-child {
+    border-right: none;
+}
+
+/* Stili per la paginazione */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a,
+.pagination .active {
+    color: #fff;
+    background-color: #e8b964;
+    padding: 6px 12px; /* Ridotto il valore del padding a 6px */
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #d2964d;
+}
+
+.pagination .active {
+    background-color: #5d4037;
+    pointer-events: none; /* Impedisce di fare clic sulla pagina corrente */
+}
+
+
+/* Stile dei bottoni */
+button {
+  background-color: #e8b964;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Stile dei bottoni al passaggio del mouse */
+button:hover {
+  background-color: #c0773f;
+}
+
+/* Stile dei bottoni quando sono premuti */
+button:active {
+  background-color: #a05b2e;
+}
+
+/* Stile dei bottoni disabilitati */
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
